@@ -9,7 +9,7 @@ import { Icon } from 'atoms'
 const Wrapper = styled.div`
   display: flex;
   flex: 1;
-  color: ${palette('default', 4)};
+  color: ${palette('default', 3)};
   align-items: center;
   justify-content: center;
   flex-direction: column;

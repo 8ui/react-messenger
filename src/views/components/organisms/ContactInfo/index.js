@@ -6,22 +6,24 @@ import styled from 'styled-components';
 import { palette } from 'styled-theme';
 
 import { Icon, Button } from 'atoms';
-import { Avatar } from 'molucules';
+import { Avatar, ScrollBar } from 'molucules';
 
 
 const Wrapper = styled.div`
   width: 530px;
-  display: flex;
   border-left: 2px solid ${palette('default', 1, true)};
-  overflow-y: auto;
-  flex-direction: column;
+`
+const List = styled(ScrollBar)`
+  min-height: 100%;
+  display: flex;
+  align-items: center;
 `
 const Content = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 10px 58px;
-  align-self: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 15px 58px;
 `
 const Header = styled.div`
   font-size: 24px;
@@ -33,8 +35,12 @@ const Header = styled.div`
   }
 `
 const AvatarWrapper = styled.div`
-  padding: 100px 0 103px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-self: center;
+  padding: 10px 0;
 `
 const Footer = styled.div`
   justify-content: space-between;
@@ -66,13 +72,15 @@ class ContactInfo extends React.Component {
     const { contact } = this.props;
     return (
       <Wrapper>
-        <Content>
-          {this.renderHeader()}
-          <AvatarWrapper>
-            <Avatar size={340} image={contact.avatar} />
-          </AvatarWrapper>
-          {this.renderFooter()}
-        </Content>
+        <List>
+          <Content>
+            {this.renderHeader()}
+            <AvatarWrapper>
+              <Avatar size={340} image={contact.avatar} />
+            </AvatarWrapper>
+            {this.renderFooter()}
+          </Content>
+        </List>
       </Wrapper>
     );
   }

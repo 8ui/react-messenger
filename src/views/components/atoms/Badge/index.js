@@ -21,7 +21,7 @@ Badge.propTypes = {
 
 Badge.defaultProps = {
   color: 'red',
-  borderColor: 'white',
+  borderColor: ['white', 0],
 }
 
 export default Badge;

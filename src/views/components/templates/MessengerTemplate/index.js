@@ -6,6 +6,7 @@ import { palette } from 'styled-theme';
 const Wrapper = styled.div`
   background: ${palette('default', 0, true)};
   border-radius: 10px;
+  min-height: calc(100vh - 60px);
   max-height: calc(100vh - 60px);
   min-width: calc(100vw - 100px);
   max-width: calc(100vw - 100px);

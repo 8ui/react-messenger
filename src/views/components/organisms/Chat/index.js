@@ -5,8 +5,9 @@ import { getUserData } from 'core/user'
 import { getContactById } from 'core/contacts'
 import { getMessagesByUser } from 'core/messages'
 import styled from 'styled-components';
+import { palette } from 'styled-theme'
 
-import { Message, ChatFooter } from 'molucules';
+import { Message, ChatFooter, ScrollBar } from 'molucules';
 
 
 const Wrapper = styled.div`
@@ -14,10 +15,19 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 `
-const MessagesWrapper = styled.div`
+const MessagesWrapper = styled(ScrollBar)`
   flex: 1;
-  overflow-y: auto;
+`
+const MessageList = styled.div`
+  min-height: 100%;
   padding: 24px 18px 24px 33px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+`
+const EmptyMessage = styled.div`
+  color: ${palette('default', 3)};
+  text-align: center;
 `
 
 class Chat extends React.Component {
@@ -29,7 +39,12 @@ class Chat extends React.Component {
     return (
       <Wrapper>
         <MessagesWrapper>
-          {messages.map(this.renderMessage)}
+          <MessageList>
+            {messages.length
+              ? messages.map(this.renderMessage)
+              : <EmptyMessage>Write something</EmptyMessage>
+            }
+          </MessageList>
         </MessagesWrapper>
         <ChatFooter />
       </Wrapper>

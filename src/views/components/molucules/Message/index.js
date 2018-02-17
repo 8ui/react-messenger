@@ -9,6 +9,9 @@ import { Avatar } from 'molucules';
 
 const Wrapper = styled.div`
   display: flex;
+
+  flex-grow: 0;
+  flex-shrink: 0;
   justify-content: ${props => props.right ? 'flex-end' : 'flex-start'};
 `
 const AvatarWrapper = styled(Avatar)`

@@ -6,12 +6,13 @@ import styled from 'styled-components'
 import { palette } from 'styled-theme'
 
 import { Link } from 'atoms'
-import { Avatar } from 'molucules'
+import { Avatar, ScrollBar } from 'molucules'
 
 const Wrapper = styled.div`
   background-color: ${palette('default', 4)};
   width: 146px;
-  overflow-y: auto;
+`
+const ListWrapper = styled(ScrollBar)`
 `
 const Item = styled(Link)`
   background-color: ${props => props.active ? palette('default', 0, true) : 'transparent'};
@@ -43,7 +44,9 @@ class ContactList extends React.Component {
     const { contacts } = this.props;
     return (
       <Wrapper>
-        {contacts.map(this.renderItem)}
+        <ListWrapper>
+          {contacts.map(this.renderItem)}
+        </ListWrapper>
       </Wrapper>
     )
   }

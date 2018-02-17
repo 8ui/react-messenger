@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { palette } from 'styled-theme';
 
-import { Link, Icon } from 'atoms';
+import { Badge, Link, Icon } from 'atoms';
 import { SearchField } from 'molucules';
 
 
@@ -31,6 +31,13 @@ const BackButton = styled(Link)`
   text-decoration: none;
   align-items: center;
 `
+const IconWrapper = styled.div`
+  position: relative;
+  margin-right: 19px;
+  > div {
+    margin-top: -4px;
+  }
+`
 
 class Header extends React.Component {
   render () {
@@ -43,11 +50,14 @@ class Header extends React.Component {
           <SearchField />
         </div>
         <div>
-          <Icon filled name="comment" />
+          <IconWrapper>
+            <Badge color="green" />
+            <Icon filled name="comment" />
+          </IconWrapper>
           <Icon filled name="note" />
         </div>
         <div>
-          
+
         </div>
       </Wrapper>
     );
