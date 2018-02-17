@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Bob",
+    "avatar": "avatar-min-4.png",
+    "online": true
+  },
+  {
+    "id": 2,
+    "name": "Jarry",
+    "avatar": "avatar-min-1.png",
+    "online": false
+  },
+  {
+    "id": 3,
+    "name": "Jonathan",
+    "avatar": "avatar-min-2.png",
+    "online": false
+  },
+  {
+    "id": 4,
+    "name": "Mike",
+    "avatar": "avatar-min-3.png",
+    "online": true
+  },
+  {
+    "id": 5,
+    "name": "Suzanne",
+    "avatar": "avatar-min-5.png",
+    "online": false
+  },
+  {
+    "id": 6,
+    "name": "Tom",
+    "avatar": "avatar-min-6.png",
+    "online": true
+  }
+]
