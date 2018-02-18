@@ -3,11 +3,12 @@
 ## Installation
 ```bash
 git clone https://github.com/8ui/react-messenger.git
+cd react-messenger
+npm install
 ```
 
 ## Usage
 ```bash
-npm install
 npm start
 open http://localhost:3018
 ```
