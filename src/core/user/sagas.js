@@ -1,6 +1,6 @@
 import { takeLatest, put, select } from 'redux-saga/effects';
 import { appActions } from '../app';
-import { userActions, userActionsRequestActions } from './actions';
+import { userActions, userRequestActions } from './actions';
 import { getUser } from './selectors';
 import User from './data.json';
 
@@ -8,7 +8,7 @@ export function * loadUser () {
   const user = yield select(getUser);
 
   if (user.loaded === false) {
-    yield put(userActionsRequestActions.fulfilled(User))
+    yield put(userRequestActions.fulfilled(User))
   }
 }
 

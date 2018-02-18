@@ -1,6 +1,6 @@
 import { takeLatest, put, select } from 'redux-saga/effects';
 import { userActions } from '../user';
-import { contactsActions, contactsActionsRequestActions } from './actions';
+import { contactsActions, contactsRequestActions } from './actions';
 import { getContacts } from './selectors';
 const Contacts = require('./data.json')
 
@@ -8,7 +8,7 @@ export function * loadContacts () {
   const contacts = yield select(getContacts);
 
   if (contacts.loaded === false) {
-    yield put(contactsActionsRequestActions.fulfilled(Contacts))
+    yield put(contactsRequestActions.fulfilled(Contacts))
   }
 }
 

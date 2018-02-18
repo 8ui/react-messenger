@@ -20,7 +20,7 @@ export const messagesActions = {
   })
 }
 
-export const messagesActionsRequestActions = {
+export const messagesRequestActions = {
   pending: messagesActions.fetchPending,
   fulfilled: messagesActions.fetchFulfilled,
   failed: messagesActions.fetchFailed,
