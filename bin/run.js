@@ -12,7 +12,6 @@ function run () {
     process.env.DEBUG = 'app:*'
   }
 
-  console.warn(process.env.NODE_ENV);
   process.env.NODE_ENV = process.env.NODE_ENV || 'development'
   const module = require(`./${task}.js`)
   module().catch(() => process.exit(1))

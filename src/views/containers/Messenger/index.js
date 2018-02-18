@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Route, Switch } from 'react-router'
 import styled from 'styled-components';
 
 import { Header, ContactList, Chat, ContactInfo, StartMessaging } from 'organisms'
@@ -12,17 +13,6 @@ const Wrapper = styled.div`
 `
 
 class Messenger extends React.Component {
-  renderContent = () => {
-    const { match } = this.props;
-    if (match.params.id) {
-      return [
-        <Chat key="chat" match={match} />,
-        <ContactInfo key="contact-info" match={match} />
-      ]
-    }
-
-    return <StartMessaging />
-  }
   render () {
     const { match } = this.props;
     return (
@@ -30,7 +20,11 @@ class Messenger extends React.Component {
         <Header />
         <Wrapper>
           <ContactList match={match} />
-          {this.renderContent()}
+          <Route path={`${match.path}/:id`} component={Chat} />
+          <Switch>
+            <Route path={`${match.path}/:id`} component={ContactInfo} />
+            <Route exact path={match.path} component={StartMessaging} />
+          </Switch>
         </Wrapper>
       </MessengerTemplate>
     );
