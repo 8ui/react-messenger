@@ -19,7 +19,7 @@ class Messenger extends React.Component {
       <MessengerTemplate>
         <Header />
         <Wrapper>
-          <ContactList match={match} />
+          <Route path={match.path} component={ContactList} />
           <Route path={`${match.path}/:id`} component={Chat} />
           <Switch>
             <Route path={`${match.path}/:id`} component={ContactInfo} />
