@@ -46,7 +46,7 @@
     "request": "^2.83.0",
     "sinon": "2.1.0",
     "style-loader": "0.16.0",
-    "url-loader": "0.6.2",
+    "url-loader": "1.0.1",
     "webpack": "^2.7.0",
     "webpack-bundle-analyzer": "2.3.1",
     "webpack-dev-server": "2.4.2"
