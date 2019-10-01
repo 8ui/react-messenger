@@ -34,7 +34,7 @@
     "eslint-config-standard": "7.1.0",
     "eslint-config-standard-react": "4.3.0",
     "eslint-plugin-promise": "3.5.0",
-    "eslint-plugin-react": "6.10.3",
+    "eslint-plugin-react": "7.15.1",
     "eslint-plugin-standard": "2.1.1",
     "extract-text-webpack-plugin": "2.1.0",
     "file-loader": "1.1.5",
