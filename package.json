@@ -70,6 +70,6 @@
     "redux-saga": "^0.16.0",
     "styled-components": "^2.2.3",
     "styled-theme": "^0.3.3",
-    "styled-tools": "^0.2.2"
+    "styled-tools": "^1.7.2"
   }
 }
