@@ -45,7 +45,7 @@
     "redux-logger": "3.0.6",
     "request": "^2.83.0",
     "sinon": "2.1.0",
-    "style-loader": "0.16.0",
+    "style-loader": "3.1.0",
     "url-loader": "0.6.2",
     "webpack": "^2.7.0",
     "webpack-bundle-analyzer": "2.3.1",
